@@ -1,59 +1,46 @@
 package somepack
 
-type From struct {
-	City *City `json:"city"`
-}
-
-type Budget struct {
-	CostCenter    string    `json:"cost_center"`
-	CostItem      string    `json:"cost_item"`
-	InvestProject string    `json:"invest_project"`
-	InvestTask    string    `json:"invest_task"`
-	Expenses      *Expenses `json:"expenses"`
-	BalanceUnit   string    `json:"balance_unit"`
-}
-
 type Participant struct {
-	Name       string  `json:"name"`
 	Id         string  `json:"id"`
 	EmployeeId float64 `json:"employee_id"`
-}
-
-type Movements struct {
-	Id      string   `json:"id"`
-	From    *From    `json:"from"`
-	To      *To      `json:"to"`
-	Payment *Payment `json:"payment"`
-}
-
-type To struct {
-	City *City `json:"city"`
+	Name       string  `json:"name"`
 }
 
 type Status struct {
-	Title string `json:"title"`
 	Id    string `json:"id"`
+	Title string `json:"title"`
 }
 
-type PaymentCompany struct {
-	RoomId  string `json:"room_id"`
-	Booking string `json:"booking"`
+type City struct {
 	Id      string `json:"id"`
+	EnName  string `json:"en_name"`
+	RusName string `json:"rus_name"`
 }
 
-type Example struct {
-	Participant    *Participant `json:"participant"`
-	Movements      *Movements   `json:"movements"`
-	Status         *Status      `json:"status"`
-	Prepayment     bool         `json:"prepayment"`
-	WorkingWeekend []string     `json:"working_weekend"`
-	Id             string       `json:"id"`
-	Goal           string       `json:"goal"`
-	DateEnd        string       `json:"date_end"`
-	Residence      *Residence   `json:"residence"`
-	DateStart      string       `json:"date_start"`
-	Agreement      bool         `json:"agreement"`
-	Budget         *Budget      `json:"budget"`
+type Payment struct {
+	Type          string  `json:"type"`
+	TransportType string  `json:"transport_type"`
+	Ticket        *Ticket `json:"ticket"`
+}
+
+type PaymentUser struct {
+	Comment   string `json:"comment"`
+	DateIn    string `json:"date_in"`
+	DateOut   string `json:"date_out"`
+	HotelName string `json:"hotel_name"`
+}
+
+type Budget struct {
+	InvestTask    string    `json:"invest_task"`
+	Expenses      *Expenses `json:"expenses"`
+	BalanceUnit   string    `json:"balance_unit"`
+	CostCenter    string    `json:"cost_center"`
+	CostItem      string    `json:"cost_item"`
+	InvestProject string    `json:"invest_project"`
+}
+
+type From struct {
+	City *City `json:"city"`
 }
 
 type Info struct {
@@ -64,10 +51,24 @@ type Info struct {
 	Comment      string `json:"comment"`
 }
 
-type Payment struct {
-	Type          string  `json:"type"`
-	TransportType string  `json:"transport_type"`
-	Ticket        *Ticket `json:"ticket"`
+type PaymentCompany struct {
+	RoomId  string `json:"room_id"`
+	Booking string `json:"booking"`
+	Id      string `json:"id"`
+}
+
+type To struct {
+	City *City `json:"city"`
+}
+
+type Ticket struct {
+	Id   string `json:"id"`
+	Info *Info  `json:"info"`
+}
+
+type Type struct {
+	Id          string `json:"id"`
+	Description string `json:"description"`
 }
 
 type Expenses struct {
@@ -76,32 +77,29 @@ type Expenses struct {
 	Value float64 `json:"value"`
 }
 
-type City struct {
-	Id          string `json:"id"`
-	EnName      string `json:"en_name"`
-	RusName     string `json:"rus_name"`
-	IataCode    string `json:"iata_code"`
-	Travelclick string `json:"travelclick"`
+type Movements struct {
+	Id      string   `json:"id"`
+	From    *From    `json:"from"`
+	To      *To      `json:"to"`
+	Payment *Payment `json:"payment"`
 }
 
-type Ticket struct {
-	Id   string `json:"id"`
-	Info *Info  `json:"info"`
+type Example struct {
+	Residence      *Residence   `json:"residence"`
+	Id             string       `json:"id"`
+	Goal           string       `json:"goal"`
+	DateStart      string       `json:"date_start"`
+	Participant    *Participant `json:"participant"`
+	Agreement      bool         `json:"agreement"`
+	Status         *Status      `json:"status"`
+	Budget         *Budget      `json:"budget"`
+	WorkingWeekend []string     `json:"working_weekend"`
+	DateEnd        string       `json:"date_end"`
+	Movements      *Movements   `json:"movements"`
+	Prepayment     bool         `json:"prepayment"`
 }
 
 type Residence struct {
 	PaymentUser    *PaymentUser    `json:"payment_user"`
 	PaymentCompany *PaymentCompany `json:"payment_company"`
-}
-
-type PaymentUser struct {
-	DateOut   string `json:"date_out"`
-	HotelName string `json:"hotel_name"`
-	Comment   string `json:"comment"`
-	DateIn    string `json:"date_in"`
-}
-
-type Type struct {
-	Id          string `json:"id"`
-	Description string `json:"description"`
 }

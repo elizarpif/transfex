@@ -15,18 +15,14 @@
         "city": {
           "id": "bc055d99-0d84-44eb-92d5-1294dd87a025",
           "en_name": "Moscow",
-          "rus_name": "Москва",
-          "iata_code": "MOW",
-          "travelclick": "CITY_MOW_RU"
+          "rus_name": "Москва"
         }
       },
       "to": {
         "city": {
           "id": "bc055d99-0d84-44eb-92d5-1294dd87a025",
           "en_name": "Moscow",
-          "rus_name": "Москва",
-          "iata_code": "MOW",
-          "travelclick": "CITY_MOW_RU"
+          "rus_name": "Москва"
         }
       },
       "payment": {
