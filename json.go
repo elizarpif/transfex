@@ -34,11 +34,11 @@ func GenerateCode(filename, pack string) error {
 	}
 
 	structs := []string{}
-	for k, v := range data{
+	for k, v := range data {
 		structs = append(structs, fmt.Sprintf("type %s struct {\n%s\n}\n", k, v))
 	}
 
-	dat := "package " + pack + "\n" + strings.Join(structs,"\n")
+	dat := "package " + pack + "\n" + strings.Join(structs, "\n")
 
 	newFile := strings.ToLower(path.Join(pack, name) + ".go")
 
@@ -152,7 +152,7 @@ func GenerateStructs(name string, data map[string]interface{}) (map[string]strin
 							if err != nil {
 								return nil, err
 							}
-							for k, v := range newStruct{
+							for k, v := range newStruct {
 								ret[k] = v
 							}
 
@@ -169,7 +169,7 @@ func GenerateStructs(name string, data map[string]interface{}) (map[string]strin
 					if err != nil {
 						return nil, err
 					}
-					for k, v := range newStruct{
+					for k, v := range newStruct {
 						ret[k] = v
 					}
 
@@ -181,6 +181,6 @@ func GenerateStructs(name string, data map[string]interface{}) (map[string]strin
 		namesOfStructs = append(namesOfStructs, str)
 	}
 
-	ret[strings.Title(name)]=strings.Join(namesOfStructs, "\n")
+	ret[strings.Title(name)] = strings.Join(namesOfStructs, "\n")
 	return ret, nil
 }
