@@ -4,9 +4,10 @@ import (
 	"testing"
 )
 
-func TestReadJson(t *testing.T) {
+
+func TestGenerateCode(t *testing.T) {
 	type args struct {
-		name string
+		filename string
 	}
 	tests := []struct {
 		name    string
@@ -15,15 +16,13 @@ func TestReadJson(t *testing.T) {
 	}{
 		{
 			name: "check read",
-			args: args{name: "testadata/example.json"},
+			args: args{filename: "testdata/example.json"},
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			_, err := ReadJson(tt.args.name)
-			if (err != nil) != tt.wantErr {
-				t.Errorf("ReadJson() error = %v, wantErr %v", err, tt.wantErr)
-				return
+			if err := GenerateCode(tt.args.filename, "somepack"); (err != nil) != tt.wantErr {
+				t.Errorf("GenerateCode() error = %v, wantErr %v", err, tt.wantErr)
 			}
 		})
 	}

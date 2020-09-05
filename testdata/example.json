@@ -1,0 +1,87 @@
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "goal": "цель поездки",
+  "date_start": "2020-07-22T19:52:22.223+03:00",
+  "date_end": "2020-07-25T19:52:22.223+03:00",
+  "participant": {
+    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "employee_id": 0,
+    "name": "string"
+  },
+  "movements": [
+    {
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "from": {
+        "city": {
+          "id": "bc055d99-0d84-44eb-92d5-1294dd87a025",
+          "en_name": "Moscow",
+          "rus_name": "Москва",
+          "iata_code": "MOW",
+          "travelclick": "CITY_MOW_RU"
+        }
+      },
+      "to": {
+        "city": {
+          "id": "bc055d99-0d84-44eb-92d5-1294dd87a025",
+          "en_name": "Moscow",
+          "rus_name": "Москва",
+          "iata_code": "MOW",
+          "travelclick": "CITY_MOW_RU"
+        }
+      },
+      "payment": {
+        "type": "HIMSELF",
+        "transport_type": "AVIA",
+        "ticket": {
+          "id": "string",
+          "info": {
+            "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+            "carrier": "string",
+            "flight_number": "string",
+            "date": "2020-09-05T15:59:46.219Z",
+            "comment": "string"
+          }
+        }
+      }
+    }
+  ],
+  "agreement": true,
+  "status": {
+    "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "title": "string"
+  },
+  "budget": {
+    "balance_unit": "string",
+    "cost_center": "string",
+    "cost_item": "string",
+    "invest_project": "string",
+    "invest_task": "string",
+    "expenses": [
+      {
+        "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "type": {
+          "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+          "description": "string"
+        },
+        "value": 0
+      }
+    ]
+  },
+  "residence": {
+    "payment_user": {
+      "comment": "string",
+      "date_in": "2020-09-05T15:59:46.220Z",
+      "date_out": "2020-09-05T15:59:46.220Z",
+      "hotel_name": "string"
+    },
+    "payment_company": {
+      "room_id": "string",
+      "booking": "string",
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+    }
+  },
+  "prepayment": true,
+  "working_weekend": [
+    "2020-09-05T15:59:46.220Z"
+  ]
+}
